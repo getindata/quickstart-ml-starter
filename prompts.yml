@@ -1,9 +1,20 @@
-# project_name:
-#   title: "Project Name"
-#   text: |
-#     Please enter a human readable name for your new project.
-#     Spaces, hyphens, and underscores are allowed.
-#   regex_validator: "^[\\w -]{2,}$"
-#   error_message: |
-#     It must contain only alphanumeric symbols, spaces, underscores and hyphens and
-#     be at least 2 characters long.
+project_name:
+  title: "Project Name"
+  text: |
+    Please enter a human readable name for your new project.
+    Spaces, hyphens, and underscores are allowed.
+  regex_validator: "^[\\w -]{2,}$"
+  error_message: |
+    It must contain only alphanumeric symbols, spaces, underscores and hyphens and
+    be at least 2 characters long.
+
+gcloud_project_id:
+  title: "Google Cloud project id"
+  text: "Use `gcloud projects list` and select one"
+  regex_validator: "^[a-z0-9-]+$"
+
+gcloud_region:
+  title: "Google Cloud region for the cluster setup"
+
+# gcloud_zone:
+#   title: "Google Cloud zone name to use for GKE nodes"

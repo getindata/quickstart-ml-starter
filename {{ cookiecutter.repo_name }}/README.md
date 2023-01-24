@@ -1,12 +1,19 @@
 # {{ cookiecutter.project_name }}
 
-<!-- ## Overview
-
-This is your new Kedro project for the [spaceflights tutorial](https://kedro.readthedocs.io/en/stable/tutorial/spaceflights_tutorial.html), which was generated using `Kedro {{ cookiecutter.kedro_version }}`.
+This is your new GID ML Framework Kedro project based on the official [spaceflights tutorial](https://kedro.readthedocs.io/en/stable/tutorial/spaceflights_tutorial.html)
 
 Take a look at the [Kedro documentation](https://kedro.readthedocs.io) to get started.
 
-## Rules and guidelines
+Additionally it features technological stack used in `gid-ml-framework`, such as:
+  * poetry
+  * pre-commit hooks
+  * Dockerfile setup
+  * VSCode dev-containers for ease of development
+  * MLFlow
+  * VertexAI
+
+
+# Rules and guidelines
 
 In order to get the best out of the template:
 
@@ -15,105 +22,85 @@ In order to get the best out of the template:
 * Don't commit data to your repository
 * Don't commit any credentials or your local configuration to your repository. Keep all your credentials and local configuration in `conf/local/`
 
-## How to install dependencies
+# Setting up the project
 
-Declare any dependencies in `src/requirements.txt` for `pip` installation and `src/environment.yml` for `conda` installation.
+## Local Setup using VSCode devcontainers (recommended)
+This approach facilitates use of [VSCode devcontainers](https://code.visualstudio.com/docs/devcontainers/containers). It is the easiest way to set up the development environment. 
 
-To install them, run:
+Prerequisites:
+* [VSCode](https://code.visualstudio.com/) with [Remote development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) extension
+* [Docker](https://www.docker.com/) with `/workspaces` entry in `Docker Desktop > Preferences > Resources > File Sharing`
 
+Setting up:
+1. Clone this repository and [open it in a container](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container).
+2. To use kedro-vertexai properly you may need to set up gcloud:
+    ```
+    gcloud auth login --update-adc
+    gcloud config set project gid-ml-framework
+    gcloud auth configure-docker europe-west4-docker.pkg.dev
+    ```
+3. You're good to go!
+
+## Local Manual Setup
+
+The project is using pyenv Python version management. It lets you easily install and switch between multiple versions of Python. To install pyenv, follow [these steps](https://github.com/pyenv/pyenv#installation=) for your operating system.
+
+To install a specific Python version use this command:
+```bash
+pyenv install 3.8.16
+pyenv shell 3.8.16
 ```
-pip install -r src/requirements.txt
+
+### Virtual environment
+
+It is recommended to create a virtual environment in your project:
+```
+python -m venv venv
+source ./venv/bin/activate
 ```
 
-## How to run your Kedro pipeline
+### Installing dependencies with Poetry
+
+To install libraries declared in the pyproject.toml you need to have `Poetry` installed. Install it from [here](https://python-poetry.org/docs/#installing-with-the-official-installer) and then run this command:
+```bash
+poetry install
+```
+
+To add and install dependencies with:
+```bash
+# dependencies
+poetry add <package_name>
+
+# dev dependencies
+poetry add -D <package_name>
+```
+# How to run Kedro
 
 You can run your Kedro project with:
 
-```
+```bash
 kedro run
 ```
 
-## How to test your Kedro project
-
-Have a look at the file `src/tests/test_run.py` for instructions on how to write your tests. You can run your tests as follows:
-
-```
-kedro test
+To run a specific pipeline:
+```bash
+kedro run -p "<PIPELINE_NAME>"
 ```
 
-To configure the coverage threshold, go to the `.coveragerc` file.
-
-## Project dependencies
-
-To generate or update the dependency requirements for your project:
-
-```
-kedro build-reqs
-```
-
-This will `pip-compile` the contents of `src/requirements.txt` into a new file `src/requirements.lock`. You can see the output of the resolution by opening `src/requirements.lock`.
-
-After this, if you'd like to update your project requirements, please update `src/requirements.txt` and re-run `kedro build-reqs`.
+# Kedro plugins
+### [Kedro-Viz](https://github.com/kedro-org/kedro-viz)
+- visualizes Kedro pipelines in an informative way
+- to run, `kedro viz --autoreload` inside project's directory
+- this will run a server on `http://127.0.0.1:4141`
 
 
-## How to work with Kedro and notebooks
+### [kedro-mlflow](https://github.com/Galileo-Galilei/kedro-mlflow)
+- lightweight integration of `MLflow` inside `Kedro` projects
+- configuration can be specified inside `conf/<ENV>/mlflow.yml` file
+- by default, experiments are saved inside `mlruns` local directory
+- to see all the local experiments, run `kedro mlflow ui`
 
-> Note: Using `kedro jupyter` or `kedro ipython` to run your notebook provides these variables in scope: `catalog`, `context`, `pipelines` and `session`.
->
-> Jupyter, JupyterLab, and IPython are already included in the project requirements by default, so once you have run `pip install -r src/requirements.txt` you will not need to take any extra steps before you use them.
-
-### Jupyter
-To use Jupyter notebooks in your Kedro project, you need to install Jupyter:
-
-```
-pip install jupyter
-```
-
-After installing Jupyter, you can start a local notebook server:
-
-```
-kedro jupyter notebook
-```
-
-### JupyterLab
-To use JupyterLab, you need to install it:
-
-```
-pip install jupyterlab
-```
-
-You can also start JupyterLab:
-
-```
-kedro jupyter lab
-```
-
-### IPython
-And if you want to run an IPython session:
-
-```
-kedro ipython
-```
-
-### How to convert notebook cells to nodes in a Kedro project
-You can move notebook code over into a Kedro project structure using a mixture of [cell tagging](https://jupyter-notebook.readthedocs.io/en/stable/changelog.html#cell-tags) and Kedro CLI commands.
-
-By adding the `node` tag to a cell and running the command below, the cell's source code will be copied over to a Python file within `src/<package_name>/nodes/`:
-
-```
-kedro jupyter convert <filepath_to_my_notebook>
-```
-> *Note:* The name of the Python file matches the name of the original notebook.
-
-Alternatively, you may want to transform all your notebooks in one go. Run the following command to convert all notebook files found in the project root directory and under any of its sub-folders:
-
-```
-kedro jupyter convert --all
-```
-
-### How to ignore notebook output cells in `git`
-To automatically strip out all output cell contents before committing to `git`, you can run `kedro activate-nbstripout`. This will add a hook in `.git/config` which will run `nbstripout` before anything is committed to `git`.
-
-> *Note:* Your output cells will be retained locally.
-
- -->
+### [kedro-vertexai](https://github.com/getindata/kedro-vertexai)
+- supports running workflows on GCP Vertex AI Pipelines
+- configuration can be specified inside `conf/<ENV>/vertexai.yml` file
+- to start Vertex AI Pipeline, run `kedro vertexai -e <ENV> run-once -p <PIPELINE_NAME>`

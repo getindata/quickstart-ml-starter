@@ -1,34 +1,20 @@
 # The `gid-ml-framework` Kedro starter
 
 ## Overview
+Based on the official `spaceflights` Kedro Starter
 
+It features:
+  * poetry
+  * pre-commit hooks
+  * Dockerfile setup
+  * VSCode dev-containers for ease of development
+  * MLFlow
+  * VertexAI
 
-
-<!-- This is a completed version of the [spaceflights tutorial project](https://kedro.readthedocs.io/en/stable/tutorial/spaceflights_tutorial.html) described in the [online Kedro documentation](https://kedro.readthedocs.io), including the data required to run the project.
-
-The tutorial works through the steps necessary to create this project. To learn the most about Kedro, we recommend that you start with a blank template as the tutorial describes, and follow the workflow. However, if you prefer to read swiftly through the documentation and get to work on the code, you may want to generate a new Kedro project using this [starter](https://kedro.readthedocs.io/en/stable/get_started/starters.html) because the steps have been done for you.
-
-To use this starter, create a new Kedro project using the commands below. To make sure you have the required dependencies, run it in your virtual environment (see [our documentation about virtual environments](https://kedro.readthedocs.io/en/stable/get_started/prerequisites.html#virtual-environments) for guidance on how to get set up):
-
+## Usage
 ```bash
 pip install kedro
-kedro new --starter=spaceflights
+kedro new --starter=https://gitlab.com/getindata/aa-labs/coe/gid-ml-framework-starter.git --checkout=main
 cd <my-project-name>  # change directory into newly created project directory
+code .
 ```
-
-Install the required dependencies:
-
-```bash
-pip install -r src/requirements.txt
-```
-
-Now you can run the project:
-
-```bash
-kedro run
-```
-
-To visualise the default pipeline, run:
-```bash
-kedro viz
-``` -->
