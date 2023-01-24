@@ -1,0 +1,10 @@
+{
+    "project_name": "New GID ML Framework Project",
+    "experiment_name": "{{ cookiecutter.project_name.strip().replace(' ', '_').lower() }}",
+    "repo_name": "{{ cookiecutter.project_name.strip().replace(' ', '-').replace('_', '-').lower() }}",
+    "python_package": "{{ cookiecutter.project_name.strip().replace(' ', '_').replace('-', '_').lower() }}",
+    "kedro_version": "{{ cookiecutter.kedro_version }}",
+    "gcloud_project_id": "",
+    "gcloud_region": "europe-west4",
+    "gcloud_zone": "europe-west4-b"
+}
