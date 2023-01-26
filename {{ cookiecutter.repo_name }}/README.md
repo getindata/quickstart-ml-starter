@@ -10,8 +10,6 @@ Additionally it features technological stack used in `gid-ml-framework`, such as
   * Dockerfile setup
   * VSCode dev-containers for ease of development
   * MLFlow
-  * VertexAI
-
 
 # Rules and guidelines
 
@@ -33,13 +31,7 @@ Prerequisites:
 
 Setting up:
 1. Clone this repository and [open it in a container](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container).
-2. To use kedro-vertexai properly you may need to set up gcloud:
-    ```
-    gcloud auth login --update-adc
-    gcloud config set project {{ cookiecutter.gcloud_project_id }}
-    gcloud auth configure-docker {{ cookiecutter.gcloud_region }}-docker.pkg.dev
-    ```
-3. You're good to go!
+2. You're good to go!
 
 ## Local Manual Setup
 
@@ -99,8 +91,3 @@ kedro run -p "<PIPELINE_NAME>"
 - configuration can be specified inside `conf/<ENV>/mlflow.yml` file
 - by default, experiments are saved inside `mlruns` local directory
 - to see all the local experiments, run `kedro mlflow ui`
-
-### [kedro-vertexai](https://github.com/getindata/kedro-vertexai)
-- supports running workflows on GCP Vertex AI Pipelines
-- configuration can be specified inside `conf/<ENV>/vertexai.yml` file
-- to start Vertex AI Pipeline, run `kedro vertexai -e <ENV> run-once -p <PIPELINE_NAME>`

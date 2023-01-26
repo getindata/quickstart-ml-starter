@@ -7,18 +7,7 @@ https://kedro.readthedocs.io/en/stable/kedro_project_setup/settings.html."""
 # HOOKS = (ProjectHooks(),)
 
 # Installed plugins for which to disable hook auto-registration.
-DISABLE_HOOKS_FOR_PLUGINS = ("kedro-mlflow",)
-
-from kedro_mlflow.framework.hooks import MlflowHook
-from kedro_vertexai.auth.gcp import MLFlowGoogleIAMRequestHeaderProvider
-from kedro_vertexai.auth.mlflow_request_header_provider_hook import (
-    MLFlowRequestHeaderProviderHook,
-)
-
-HOOKS = (
-    MlflowHook(),
-    MLFlowRequestHeaderProviderHook(MLFlowGoogleIAMRequestHeaderProvider)
-)
+# DISABLE_HOOKS_FOR_PLUGINS = ("kedro-mlflow",)
 
 # Class that manages storing KedroSession data.
 # from kedro.framework.session.store import ShelveStore

@@ -1,8 +1,0 @@
-# INPUT DATA
-# articles:
-#   type: pandas.CSVDataSet
-#   filepath: gs://{{ cookiecutter.repo_name }}/01_raw/articles.csv
-#   layer: raw
-#   load_args:
-#     dtype:
-#       article_id: str

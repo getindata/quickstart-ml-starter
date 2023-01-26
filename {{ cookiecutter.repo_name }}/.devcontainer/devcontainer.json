@@ -14,8 +14,7 @@
 		"visualstudioexptteam.vscodeintellicode",
 		"njpwerner.autodocstring",
 		"tamasfe.even-better-toml",
-		"samuelcolvin.jinjahtml",
-		"googlecloudtools.cloudcode"
+		"samuelcolvin.jinjahtml"
 	],
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
