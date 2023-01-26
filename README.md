@@ -1,9 +1,7 @@
-# The `gid-ml-framework` Kedro starter
+# GetInData ML Framework Kedro starter for GCP
 
 ## Overview
-Based on the official `spaceflights` Kedro Starter
-
-It features:
+This is a `cookiecutter` template for Kedro, which features:
   * poetry
   * pre-commit hooks
   * Dockerfile setup
@@ -14,7 +12,8 @@ It features:
 ## Usage
 ```bash
 pip install kedro
-kedro new --starter=https://gitlab.com/getindata/aa-labs/coe/gid-ml-framework-starter.git --checkout=main
+kedro new --starter=https://gitlab.com/getindata/aa-labs/coe/gid-ml-framework-starter.git --checkout=local-gcp
+# or kedro new --starter=git@gitlab.com:getindata/aa-labs/coe/gid-ml-framework-starter.git  --checkout=local-gcp
 cd <my-project-name>  # change directory into newly created project directory
 code .
 ```

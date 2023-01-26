@@ -1,6 +1,6 @@
 # {{ cookiecutter.project_name }}
 
-This is your new GID ML Framework Kedro project based on the official [spaceflights tutorial](https://kedro.readthedocs.io/en/stable/tutorial/spaceflights_tutorial.html)
+This is your new GID ML Framework Kedro project
 
 Take a look at the [Kedro documentation](https://kedro.readthedocs.io) to get started.
 
@@ -36,8 +36,8 @@ Setting up:
 2. To use kedro-vertexai properly you may need to set up gcloud:
     ```
     gcloud auth login --update-adc
-    gcloud config set project gid-ml-framework
-    gcloud auth configure-docker europe-west4-docker.pkg.dev
+    gcloud config set project {{ cookiecutter.gcloud_project_id }}
+    gcloud auth configure-docker {{ cookiecutter.gcloud_region }}-docker.pkg.dev
     ```
 3. You're good to go!
 

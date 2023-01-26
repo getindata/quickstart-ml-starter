@@ -3,7 +3,7 @@ project_id: {{ cookiecutter.gcloud_project_id }}
 region: {{ cookiecutter.gcloud_region }}
 run_config:
   # Name of the image to run as the pipeline steps
-  image: "{{ cookiecutter.gcloud_region }}-docker.pkg.dev/gid-ml-framework/{{ cookiecutter.repo_name }}/{{ cookiecutter.repo_name }}:latest"
+  image: "{{ cookiecutter.gcloud_region }}-docker.pkg.dev/{{ cookiecutter.gcloud_project_id }}/{{ cookiecutter.repo_name }}/{{ cookiecutter.repo_name }}:latest"
 
   # Pull policy to be used for the steps. Use Always if you push the images
   # on the same tag, or Never if you use only local images

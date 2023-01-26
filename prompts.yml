@@ -14,7 +14,4 @@ gcloud_project_id:
   regex_validator: "^[a-z0-9-]+$"
 
 gcloud_region:
-  title: "Google Cloud region for the cluster setup"
-
-# gcloud_zone:
-#   title: "Google Cloud zone name to use for GKE nodes"
+  title: "Google Cloud region"
