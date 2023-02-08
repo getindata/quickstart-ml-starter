@@ -1,18 +1,13 @@
 # GetInData ML Framework Kedro starter
 
-## Overview
-This is a `cookiecutter` template for Kedro, which features:
-  * poetry
-  * pre-commit hooks
-  * Dockerfile setup
-  * VSCode dev-containers for ease of development
-  * MLFlow
+## Usage for local-pnly environment
 
-## Usage
-```bash
-pip install kedro
+# For HTTPS cloning:
 kedro new --starter=https://gitlab.com/getindata/aa-labs/coe/gid-ml-framework-starter.git --checkout=local
-# or kedro new --starter=git@gitlab.com:getindata/aa-labs/coe/gid-ml-framework-starter.git  --checkout=local
-cd <my-project-name>  # change directory into newly created project directory
-code .
-```
+
+# For SSH cloning:
+kedro new --starter=git@gitlab.com:getindata/aa-labs/coe/gid-ml-framework-starter.git  --checkout=local
+
+# Follow the prompts to name your project and optionally set cloud project details, then change directory into newly created project directory:
+cd <my-project-name>
+ s
