@@ -36,3 +36,5 @@ kedro new --starter=git@gitlab.com:getindata/aa-labs/coe/gid-ml-framework-starte
 # Follow the prompts to name your project and optionally set cloud project details, then change directory into newly created project directory:
 cd <my-project-name>
 ```
+
+After that, follow the way-of-work described in [GID ML Framework documentation - TO BE UPDATED](https://gitlab.com/getindata/aa-labs/coe/gid-ml-framework/-/tree/main) to develop your project.
