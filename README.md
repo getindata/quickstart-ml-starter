@@ -1,6 +1,6 @@
 # GetInData ML Framework Kedro starter
 
-## Usage for local-pnly environment
+## Usage for local-only environment
 
 # For HTTPS cloning:
 kedro new --starter=https://gitlab.com/getindata/aa-labs/coe/gid-ml-framework-starter.git --checkout=local
