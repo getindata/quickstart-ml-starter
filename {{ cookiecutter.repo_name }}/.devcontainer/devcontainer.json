@@ -42,10 +42,14 @@
 
 	"runArgs": [
 		"--init"
-		
+
+		// Uncomment for  emulated ARM64 (Apple M1/M2) support
+		//,"--platform=linux/amd64"
+
 		// Uncomment to add NVIDIA GPU support
-		// "--gpus",
-		// "all"
+		// ,"--gpus"
+		// ,"all"
 	],
+
 	"shutdownAction": "none"
 }
