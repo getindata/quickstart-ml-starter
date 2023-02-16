@@ -1,6 +1,8 @@
 ARG BASE_IMAGE=nvidia/cuda:11.3.0-runtime-ubuntu20.04
 
 FROM $BASE_IMAGE
+# Change the above line for the one below to enable emulated ARM64 (Apple M1/M2) support
+# FROM --platform=linux/amd64 $BASE_IMAGE
 
 RUN apt-get update && apt-get upgrade -y
 
