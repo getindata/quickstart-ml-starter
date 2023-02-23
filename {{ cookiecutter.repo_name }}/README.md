@@ -24,6 +24,8 @@ In order to get the best out of the template:
 
 # Setting up the project
 
+Below there are short instructions on how to get the environment for your new project up and running. Detailed version with some remarks and specific cases described are available in [GID ML Framework documentation - TO BE UPDATED](https://gitlab.com/getindata/aa-labs/coe/gid-ml-framework/-/blob/docs-release/README.md).
+
 ## Local Setup using VSCode devcontainers (recommended)
 This approach facilitates use of [VSCode devcontainers](https://code.visualstudio.com/docs/devcontainers/containers). It is the easiest way to set up the development environment. 
 
