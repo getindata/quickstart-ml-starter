@@ -1,15 +1,16 @@
 # {{ cookiecutter.project_name }}
 
-This is your new GID ML Framework Kedro project
+This is your new Kedro project configured according to GID ML Framework principles. Modify this README as you develop your project, for now you will find here some basic info that you need to get started. For more detailed assistance please refer to the [Kedro documenation](https://kedro.readthedocs.io/en/stable/index.html) and [GID ML Framework documentation](https://github.com/getindata/gid-ml-framework).
 
-Take a look at the [Kedro documentation](https://kedro.readthedocs.io) to get started.
+Additionally to a blank Kedro template it features technological stack used in GID ML Framework, such as:
+  - [Poetry](https://python-poetry.org/)
+  - [pre-commit](https://pre-commit.com/) hooks
+  - [Dockerfile](https://docs.docker.com/engine/reference/builder/) setup
+  - [VSCode Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers) for ease of development
+  - [MLFlow integration](https://kedro-mlflow.readthedocs.io/en/stable/)
+  - [GCP VertexAI Kedro integration](https://github.com/getindata/kedro-vertexai) with integration to other platforms to be added
 
-Additionally it features technological stack used in `gid-ml-framework`, such as:
-  * poetry
-  * pre-commit hooks
-  * Dockerfile setup
-  * VSCode dev-containers for ease of development
-  * MLFlow
+ Apart from that, there are no pre-implemented nodes or pipelines here. For blueprints showing different machine learning use cases, please go to the main [GID ML Framework](https://github.com/getindata/gid-ml-framework) repo and feel free to take as much as you need from our examples.
 
 # Rules and guidelines
 
