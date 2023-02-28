@@ -4,7 +4,7 @@
 
 This is a set of [Cookiecutter](https://www.cookiecutter.io/) templates in the form of [Kedro starters](https://kedro.readthedocs.io/en/0.18.0/get_started/starters.html). These starters allow to easily create a new project that doesn't implement any nodes or pipelines yet, but contains necessary tooling and follows all GID ML Framework principles.
 
-GID ML Framework repository and documentation with detailed description of the way-of-work can be found [here - TO BE UPDATED](https://gitlab.com/getindata/aa-labs/coe/gid-ml-framework/-/tree/main)
+GID ML Framework repository and documentation with detailed description of the way-of-work can be found [here](https://github.com/getindata/gid-ml-framework)
 
 Initiating a project using one of the Kedro starters you will get out-of-the box:
 * appropriate project structure matching Kedro and Cookiecutter standard that features configuration files, code testing framework, layers data-engineering convention and more
@@ -37,4 +37,4 @@ kedro new --starter=git@gitlab.com:getindata/aa-labs/coe/gid-ml-framework-starte
 cd <my-project-name>
 ```
 
-After that, follow the way-of-work described in [GID ML Framework documentation - TO BE UPDATED](https://gitlab.com/getindata/aa-labs/coe/gid-ml-framework/-/tree/main) to develop your project.
+After that, follow the way-of-work described in [GID ML Framework documentation](https://github.com/getindata/gid-ml-framework) to develop your project.
