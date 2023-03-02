@@ -4,13 +4,13 @@
 
 This is a set of [Cookiecutter](https://www.cookiecutter.io/) templates in the form of [Kedro starters](https://kedro.readthedocs.io/en/0.18.0/get_started/starters.html). These starters allow to easily create a new project that doesn't implement any nodes or pipelines yet, but contains necessary tooling and follows all GID ML Framework principles.
 
-GID ML Framework repository and documentation with detailed description of the way-of-work can be found [here](https://github.com/getindata/gid-ml-framework)
+GID ML Framework repository and documentation with detailed description of the way-of-work can be found [here](https://github.com/getindata/gid-ml-framework).
 
 Initiating a project using one of the Kedro starters you will get out-of-the box:
-* appropriate project structure matching Kedro and Cookiecutter standard that features configuration files, code testing framework, layers data-engineering convention and more
-* VCode Dev Containers and Docker setup files to create a transferrable working environment automatically
-* MLFlow and Kedro-Viz
-* A set of pre-configures environment management and code quality tools ([Poetry](https://python-poetry.org/), [pre-commit](https://pre-commit.com/) hooks, linters)
+* appropriate project structure matching [Kedro](https://kedro.org/) and [Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/) standard that features configuration files, code testing framework, layers data-engineering convention and more
+* [VSCode Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers) and Docker setup files to create a transferrable working environment automatically
+* [MLFlow](https://mlflow.org/) and [Kedro-Viz](https://kedro.readthedocs.io/en/stable/visualisation/kedro-viz_visualisation.html)
+* A set of pre-configured environment management and code quality tools ([Poetry](https://python-poetry.org/), [pre-commit](https://pre-commit.com/) hooks, linters)
 * Accordingly to your target full-scale environment - Kedro plugins setup for easy transfer and running your local work on [GCP](https://github.com/getindata/kedro-vertexai), [AWS](https://github.com/getindata/kedro-sagemaker),  [Azure](https://github.com/getindata/kedro-azureml) or [Kubeflow](https://github.com/getindata/kedro-kubeflow)
 
 There are a few branches in the repository that use basically the same template, but have environment-specific additions depending on where are you planning to run your full-scale solution after local prototyping phase:
@@ -22,7 +22,7 @@ There are a few branches in the repository that use basically the same template,
 
 ## Usage
 
-To use kredro started you to have some Python 3 environment with Kedro installed. The method of installation is up to you (you can use Pyenv and Poetry, Conda, Virtual Env etc.) - this installation Kedro is only needed to create a project from a starter. After that, the project will use its own encapsulated Pyenv/Poetry environment with its own Kedro.
+To use this Kedro starter you to have some Python 3 environment with Kedro installed. The method of installation is up to you (you can use Pyenv and Poetry, Conda, Virtual Env etc.) - this installation Kedro is only needed to create a project from a starter. After that, the project will use its own encapsulated Pyenv/Poetry environment with its own Kedro.
 
 To create a new project using Kedro starter:
 
