@@ -28,10 +28,10 @@ To create a new project using Kedro starter:
 
 ```bash
 # For HTTPS cloning:
-kedro new --starter=https://github.com/getindata/quickstart-ml-blueprints.git --checkout=<branch_name>
+kedro new --starter=https://github.com/getindata/quickstart-ml-starter.git --checkout=<branch_name>
 
 # For SSH cloning:
-kedro new --starter=git@github.com:getindata/quickstart-ml-blueprints.git  --checkout=<branch_name>
+kedro new --starter=git@github.com:getindata/quickstart-ml-starter.git  --checkout=<branch_name>
 
 # Follow the prompts to name your project and optionally set cloud project details, then change directory into newly created project directory:
 cd <my-project-name>
