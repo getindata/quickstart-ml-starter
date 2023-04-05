@@ -1,5 +1,5 @@
 {
-    "project_name": "New GID ML Framework Project",
+    "project_name": "New QuickStart ML Project",
     "experiment_name": "{{ cookiecutter.project_name.strip().replace(' ', '_').lower() }}",
     "repo_name": "{{ cookiecutter.project_name.strip().replace(' ', '-').replace('_', '-').lower() }}",
     "python_package": "{{ cookiecutter.project_name.strip().replace(' ', '_').replace('-', '_').lower() }}"
