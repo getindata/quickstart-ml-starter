@@ -1,8 +1,8 @@
 # {{ cookiecutter.project_name }}
 
-This is your new Kedro project configured according to GID ML Framework principles. Modify this README as you develop your project, for now you will find here some basic info that you need to get started. For more detailed assistance please refer to the [Kedro documenation](https://kedro.readthedocs.io/en/stable/index.html) and [GID ML Framework documentation](https://github.com/getindata/gid-ml-framework).
+This is your new Kedro project configured according to QuickStart ML principles. Modify this README as you develop your project, for now you will find here some basic info that you need to get started. For more detailed assistance please refer to the [Kedro documenation](https://kedro.readthedocs.io/en/stable/index.html) and [QuickStart ML Blueprints](https://github.com/getindata/quickstart-ml-blueprints).
 
-Additionally to a blank Kedro template it features technological stack used in GID ML Framework, such as:
+Additionally to a blank Kedro template it features technological stack used in QuickStart ML approach, such as:
   - [Poetry](https://python-poetry.org/)
   - [pre-commit](https://pre-commit.com/) hooks
   - [Dockerfile](https://docs.docker.com/engine/reference/builder/) setup
@@ -10,7 +10,7 @@ Additionally to a blank Kedro template it features technological stack used in G
   - [MLFlow integration](https://kedro-mlflow.readthedocs.io/en/stable/)
   - [GCP VertexAI Kedro integration](https://github.com/getindata/kedro-vertexai) with integration to other platforms to be added
 
- Apart from that, there are no pre-implemented nodes or pipelines here. For blueprints showing different machine learning use cases, please go to the main [GID ML Framework](https://github.com/getindata/gid-ml-framework) repo and feel free to take as much as you need from our examples.
+ Apart from that, there are no pre-implemented nodes or pipelines here. For blueprints showing different machine learning use cases, please go to the main [QuickStart ML Blueprints](https://github.com/getindata/quickstart-ml-blueprints) repo and feel free to take as much as you need from our examples.
 
 # Rules and guidelines
 
@@ -23,7 +23,7 @@ In order to get the best out of the template:
 
 # Setting up the project
 
-Below there are short instructions on how to get the environment for your new project up and running. Detailed version with some remarks and specific cases described are available in [GID ML Framework documentation - TO BE UPDATED](https://gitlab.com/getindata/aa-labs/coe/gid-ml-framework/-/blob/docs-release/README.md).
+Below there are short instructions on how to get the environment for your new project up and running. Detailed version with some remarks and specific cases described are available in [QuickStart ML Blueprints documentation](https://github.com/getindata/quickstart-ml-blueprints).
 
 ## Local Setup using VSCode devcontainers (recommended)
 This approach facilitates use of [VSCode devcontainers](https://code.visualstudio.com/docs/devcontainers/containers). It is the easiest way to set up the development environment. 
