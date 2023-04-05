@@ -22,7 +22,7 @@ There are a few branches in the repository that use basically the same template,
 
 ## Usage
 
-To use kredro started you to have some Python 3 environment with Kedro installed. The method of installation is up to you (you can use Pyenv and Poetry, Conda, Virtual Env etc.) - this installation Kedro is only needed to create a project from a starter. After that, the project will use its own encapsulated Pyenv/Poetry environment with its own Kedro.
+To use this Kedro starter you to have some Python 3 environment with Kedro installed. The method of installation is up to you (you can use Pyenv and Poetry, Conda, Virtual Env etc.) - this installation Kedro is only needed to create a project from a starter. After that, the project will use its own encapsulated Pyenv/Poetry environment with its own Kedro.
 
 To create a new project using Kedro starter:
 
